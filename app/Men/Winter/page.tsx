@@ -1,14 +1,14 @@
 import React from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/footer'
-import {  CardData2 } from '@/data/CardDatawinter'
+import {  cardData2, CardData2 } from '@/data/CardDatawinter'
 import Link from 'next/link'
 const Wintermen = () => {
   return (
     <>
     <Navbar />
     <div className="flex flex-wrap justify-center gap-6 p-6">
-        {CardData2.map((item) => (
+        {cardData2.map((item) => (
           <div key={item.id} className="relative w-96 h-64 shadow-xl overflow-hidden group">
             <figure className="h-full">
               <img

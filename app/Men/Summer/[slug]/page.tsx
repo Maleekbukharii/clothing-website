@@ -115,44 +115,47 @@ const Page = ({ params }: PageProps) => {
 
             {/* Quantity Selector */}
             <div className="mt-10 mx-5">
-  <label htmlFor="quantity" className="block text-lg font-semibold">
-    Quantity
-  </label>
-  <div className="flex items-center mt-2">
-    <button
-      onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}
-      className="px-3 py-2 bg-gray-200 text-gray-700 rounded-l hover:bg-gray-300"
-    >
-      -
-    </button>
-    <input
-      type="number"
-      id="quantity"
-      value={quantity}
-      onChange={handleQuantityChange}
-      className="w-20 py-2 text-center border"
-      min="1"
-    />
-    <button
-      onClick={() => setQuantity(quantity + 1)}
-      className="px-3 py-2 bg-gray-200 text-gray-700 rounded-r hover:bg-gray-300"
-    >
-      +
-    </button>
-  </div>
-</div>
-
+              <label htmlFor="quantity" className="block text-lg font-semibold">
+                Quantity
+              </label>
+              <div className="flex items-center mt-2">
+                <button
+                  onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}
+                  className="px-3 py-2 bg-gray-200 text-gray-700 rounded-l hover:bg-gray-300"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  id="quantity"
+                  value={quantity}
+                  onChange={handleQuantityChange}
+                  className="w-20 py-2 text-center border"
+                  min="1"
+                />
+                <button
+                  onClick={() => setQuantity(quantity + 1)}
+                  className="px-3 py-2 bg-gray-200 text-gray-700 rounded-r hover:bg-gray-300"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+            <h2 className=' mt-10 mx-5 text-2xl font-bold'>Price</h2>
+            <p className="text-xl font-semibold text-white mt-5 mx-5 underline">${item.price.toFixed(2)}</p>
             {/* Add to Cart & Buy Now Buttons */}
             <div className="mt-10 mx-5 flex space-x-4">
+              <Link href='/Cart'>
               <button
                 onClick={handleAddToCart}
-                className="bg-gray-600 text-white py-2 px-4 rounded-full hover:bg-blue-700"
+                className="bg-gray-500 text-white py-2 px-4 rounded-full hover:bg-gray-700"
               >
                 Add to Cart
               </button>
+              </Link>
               <button
                 onClick={handleBuyNow}
-                className="bg-gray-600 text-white py-2 px-4 rounded-full hover:bg-green-700"
+                className="bg-gray-500 text-white py-2 px-4 rounded-full hover:bg-gray-700"
               >
                 Buy Now
               </button>

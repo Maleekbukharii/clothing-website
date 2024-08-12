@@ -3,7 +3,8 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/footer';
 import { useState } from 'react';
-import { CardData2 } from '@/data/CardDatawinter';
+import { cardData2, CardData2 } from '@/data/CardDatawinter';
+
 interface PageProps {
   params: {
     slug: string;
@@ -16,7 +17,7 @@ const Page = ({ params }: PageProps) => {
   const [isCareGuideOpen, setIsCareGuideOpen] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
-  const item = CardData2.find(data => data.slug === params.slug);
+  const item = cardData2.find(data => data.slug === params.slug);
 
   const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(e.target.value, 10);

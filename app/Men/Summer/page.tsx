@@ -11,7 +11,7 @@ const Summermen = () => {
       <Navbar />
       <div className="flex flex-wrap justify-center gap-6 p-6">
         {cardData.map((item) => (
-          <div key={item.id} className="relative w-96 h-64 shadow-xl overflow-hidden group">
+          <div key={item.id} className="relative w-96 h-80 shadow-xl overflow-hidden group">
             <figure className="h-full">
               <img
                 src={item.imageSrc}
@@ -29,6 +29,9 @@ const Summermen = () => {
                   <button className="btn btn-primary">View</button>
                 </Link>
               </div>
+            </div>
+            <div className="absolute bottom-0 right-0 bg-white p-2 m-4 text-center">
+              <p className="text-lg font-bold text-black">${item.price.toFixed(2)}</p>
             </div>
           </div>
         ))}
