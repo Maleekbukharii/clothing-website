@@ -106,8 +106,8 @@ const Navbar: React.FC = () => {
             <details>
               <summary>Women</summary>
               <ul className="p-3 bg-base-100 text-gray-300 z-50">
-                <li className="py-1 px-3"><Link href="/Women/Winter">Winter Collection</Link></li>
-                <li className="py-1 px-3"><Link href="/Women/Summer">Summer Collection</Link></li>
+                <li className="py-1 px-3"><Link href="/Women">Winter Collection</Link></li>
+                <li className="py-1 px-3"><Link href="/Women">Summer Collection</Link></li>
               </ul>
             </details>
           </li>
